@@ -20,3 +20,5 @@ CppParser
 MongoDB
 PocoDoc
 ProGen
+DNSSD
+DNSSD/Bonjour
