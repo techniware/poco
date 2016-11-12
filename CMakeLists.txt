@@ -77,7 +77,7 @@ option(ENABLE_CPPPARSER "Enable C++ parser" OFF)
 option(ENABLE_POCODOC "Enable Poco Documentation Generator" OFF)
 option(ENABLE_PAGECOMPILER "Enable PageCompiler" ON)
 option(ENABLE_PAGECOMPILER_FILE2PAGE "Enable File2Page" ON)
-
+option(ENABLE_DNSSD "Enable DNSSD" ON)
 option(FORCE_OPENSSL "Force usage of OpenSSL even under windows" OFF)
 
 option(ENABLE_TESTS
@@ -156,6 +156,11 @@ endif()
 if(ENABLE_NET)
 add_subdirectory(Net)
 list(APPEND Poco_COMPONENTS "Net")
+endif()
+
+if(ENABLE_DNSSD)
+    add_subdirectory(DNSSD)
+    list(APPEND Poco_COMPONENTS "DNSSD")
 endif()
 
 
